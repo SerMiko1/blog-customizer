@@ -32,8 +32,6 @@
 	cursor: pointer;
 }
 
-/* Убираем бордер у последнего в radiogroup, чтобы не было двойного бордера */
-
 .item:last-child .label {
 	border: none;
 }
