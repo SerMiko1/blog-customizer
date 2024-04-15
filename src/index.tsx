@@ -26,7 +26,7 @@ const App = () => {
 	};
 
 	return (
-		<div
+		<main
 			className={clsx(styles.main)}
 			style={
 				{
@@ -44,7 +44,7 @@ const App = () => {
 				applyStyles={applyState}
 			/>
 			<Article />
-		</div>
+		</main>
 	);
 };
 

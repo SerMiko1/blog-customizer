@@ -6,8 +6,10 @@ type UseCloseForm = {
 	rootRef: React.RefObject<HTMLElement>;
 };
 
-export const useCloseForm = ({ isOpen, onClose, rootRef }: UseCloseForm) => {
+export const useClose = ({ isOpen, onClose, rootRef }: UseCloseForm) => {
 	useEffect(() => {
+		if (!isOpen) return;
+
 		// По Esc
 		const handleEsc = (event: KeyboardEvent) => {
 			if (event.key === 'Escape') {

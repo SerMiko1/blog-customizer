@@ -18,7 +18,7 @@ import {
 } from 'src/constants/articleProps';
 import { RadioGroup } from '../radio-group';
 import { Separator } from '../separator';
-import { useCloseForm } from './hooks/useCloseForm';
+import { useClose } from './hooks/useCloseForm';
 
 type ArticleParamsFormProps = {
 	state: typeof defaultArticleState;
@@ -33,10 +33,10 @@ export const ArticleParamsForm = ({
 	resetStyles,
 	applyStyles,
 }: ArticleParamsFormProps) => {
-	const [isOpen, setOpen] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	const toggleOpen = () => {
-		setOpen((prevOpen) => !prevOpen);
+	const toggleMenu = () => {
+		setIsMenuOpen((prevOpen) => !prevOpen);
 	};
 
 	const handleChangeFontFamily = (value: OptionType) => {
@@ -61,18 +61,21 @@ export const ArticleParamsForm = ({
 
 	const formRef = useRef<HTMLFormElement | null>(null);
 
-	useCloseForm({
-		isOpen: isOpen,
-		onClose: toggleOpen,
+	useClose({
+		isOpen: isMenuOpen,
+		onClose: toggleMenu,
 		rootRef: formRef,
 	});
 
 	return (
 		<>
-			<ArrowButton onClick={() => !isOpen && toggleOpen()} isOpen={isOpen} />
+			<ArrowButton
+				onClick={() => !isMenuOpen && toggleMenu()}
+				isOpen={isMenuOpen}
+			/>
 			<aside
 				className={clsx(styles.container, {
-					[styles.container_open]: isOpen,
+					[styles.container_open]: isMenuOpen,
 				})}>
 				<form
 					className={styles.form}
