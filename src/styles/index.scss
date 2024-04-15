@@ -1,8 +1,4 @@
-/* Подключаем стили со шрифтами, так как они нужны на всех страницах */
-
 @import '~fonts/font';
-
-/* Отключаем браузерные дефолтные стили для всех элементов */
 
 html,
 div,
@@ -91,8 +87,6 @@ video {
 	vertical-align: baseline;
 	border: 0;
 }
-
-/* HTML5 display-role reset for older browsers */
 
 article,
 aside,

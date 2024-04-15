@@ -26,7 +26,7 @@
 		"css-loader": "^6.8.1",
 		"cssnano": "^6.0.1",
 		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^8.42.0",
+		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-import-resolver-typescript": "^3.6.1",
 		"eslint-plugin-eslint-comments": "^3.2.0",
@@ -47,7 +47,7 @@
 		"sass-loader": "^13.3.3",
 		"storybook": "^7.6.10",
 		"style-loader": "^3.3.3",
-		"stylelint": "^16.1.0",
+		"stylelint": "^16.3.1",
 		"stylelint-config-standard-scss": "^13.0.0",
 		"stylelint-order": "^6.0.3",
 		"ts-loader": "^9.4.3",
@@ -79,7 +79,8 @@
 	"dependencies": {
 		"clsx": "^2.1.0",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"yarn": "^1.22.22"
 	},
 	"lint-staged": {
 		"*.{css,scss}": "yarn stylelint:fix",
