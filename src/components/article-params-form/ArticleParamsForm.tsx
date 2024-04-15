@@ -80,7 +80,10 @@ export const ArticleParamsForm = ({
 				<form
 					className={styles.form}
 					ref={formRef}
-					onSubmit={(e: FormEvent) => e.preventDefault()}>
+					onSubmit={(e: FormEvent) => {
+						e.preventDefault();
+						applyStyles();
+					}}>
 					<Text as={'h2'} size={31} weight={800} uppercase={true}>
 						Задайте параметры
 					</Text>
@@ -122,7 +125,7 @@ export const ArticleParamsForm = ({
 					/>
 					<div className={styles.bottomContainer}>
 						<Button title='Сбросить' type='reset' onClick={resetStyles} />
-						<Button title='Применить' type='submit' onClick={applyStyles} />
+						<Button title='Применить' type='submit' />
 					</div>
 				</form>
 			</aside>
